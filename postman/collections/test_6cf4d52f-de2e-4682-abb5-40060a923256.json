@@ -1,0 +1,139 @@
+{
+    "info": {
+        "_postman_id": "944d0605-c24b-4962-982b-59a12e94a32c",
+        "name": "test",
+        "description": "Simple API to demo the API Builder in Postman a a\n\nContact Support:  \nName: Arlemi Turpault  \nEmail: [arlemi@postman.com](mailto:arlemi@postman.com)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "videos",
+            "item": [
+                {
+                    "name": "List all videos",
+                    "id": "4ad7a8a9-5c6b-454e-afe0-83c1d332e0f4",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/videos",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "videos"
+                            ]
+                        },
+                        "description": "Returns a list of all the Exploratory videos"
+                    },
+                    "response": [
+                        {
+                            "id": "9ab384e7-01d7-49e3-9315-0e7386288ead",
+                            "name": "List of videos",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/videos",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "videos"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"name\": \"Public Workspaces\",\n  \"url\": \"https://www.youtube.com/watch?v=DjGbMdqnY64\",\n  \"views\": 7483\n },\n {\n  \"name\": \"Public Workspaces\",\n  \"url\": \"https://www.youtube.com/watch?v=DjGbMdqnY64\",\n  \"views\": 7483\n }\n]"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fetch one video by ID",
+                    "id": "945a71d3-e369-484a-9860-2eb63155a598",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/videos/:videoId",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "videos",
+                                ":videoId"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "660afc28-ad4b-4715-b7ac-c06abd21f8d6",
+                                    "key": "videoId",
+                                    "value": "4",
+                                    "description": "(Required) "
+                                }
+                            ]
+                        },
+                        "description": "Get a single video"
+                    },
+                    "response": [
+                        {
+                            "id": "cac3f473-bb55-4308-98a8-dce9174330a2",
+                            "name": "List of videos",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/videos/:videoId",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "videos",
+                                        ":videoId"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "videoId",
+                                            "value": "4",
+                                            "description": "(Required) "
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"name\": \"Public Workspaces\",\n \"url\": \"https://www.youtube.com/watch?v=DjGbMdqnY64\",\n \"views\": 7483\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "b319f209-9e06-4601-b7d3-2639b72c9e2b"
+        }
+    ],
+    "variable": [
+        {
+            "id": "9d0516cf-0cbc-49d6-b8d6-90241cbc2963",
+            "key": "baseUrl",
+            "value": "http://localhost:3000",
+            "type": "string"
+        }
+    ]
+}
